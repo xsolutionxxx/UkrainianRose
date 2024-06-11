@@ -18,7 +18,17 @@ const config = {
       },
     },
     extend: {
+      width: {
+        "custom-width-1": "1px",
+        "custom-width-18": "18px",
+      },
+      height: {
+        "custom-height-1": "1px",
+        "custom-height-18": "18px",
+      },
       colors: {
+        'custom-deep-blue': '#011222',
+        'custom-dark-blue': '#020D19',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
