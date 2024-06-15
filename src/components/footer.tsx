@@ -88,6 +88,8 @@ export default function Footer() {
                                     <li key={contact.name}>
                                         <Link
                                             href={contact.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="hover:underline">
                                             {contact.text}
                                         </Link>
@@ -103,7 +105,8 @@ export default function Footer() {
                                         <Link
                                             href={social.href}
                                             target="_blank"
-                                            rel="noopener noreferrer" className="relative flex gap-2">
+                                            rel="noopener noreferrer"
+                                            className="relative flex gap-2">
                                             {social.media}
                                         </Link>
                                     </li>
@@ -122,7 +125,7 @@ export default function Footer() {
                             placeholder="Ваша електронна пошта"
                             className="px-5 py-3 w-full bg-custom-deep-blue border rounded-lg border-slate-600 text-sm text-white focus:outline-none" />
                         <Button
-                            className={`${buttonVariants({ size:'lg', variant: 'rose'})} font-light text-sm text-white sm:w-1/2 md:w-3/5 lg:w-2/3`}>
+                            className={`${buttonVariants({ size: 'lg', variant: 'rose' })} font-light text-sm sm:w-1/2 md:w-3/5 lg:w-2/3`}>
                             <Mail
                                 strokeWidth={1}
                                 className="mr-2 w-5" /> Підписатися

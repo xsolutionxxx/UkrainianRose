@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import MaxWidthWrapper from "./MaxWidthWrapper";
+import Cart from "./Cart";
 import Link from 'next/link';
-import { Menu, Search, X, ArrowLeft, Heart, ShoppingBag, UserRound, ChevronRight, LayoutDashboard } from 'lucide-react';
+import { Menu, Search, X, ArrowLeft, Heart, UserRound, ChevronRight, LayoutDashboard } from 'lucide-react';
 
 export default function Navbar() {
     const [navOpen, setNavOpen] = useState(false);
@@ -112,10 +113,7 @@ export default function Navbar() {
                                 <Link href="/wishlist" className="w-6 text-white cursor-pointer lg:w-7">
                                     <Heart strokeWidth={1.25} className="full-size" />
                                 </Link>
-                                <Link href="/cart" className="relative w-6 lg:w-7 text-white cursor-pointer">
-                                    <ShoppingBag strokeWidth={1.25} className="full-size" />
-                                    <div className="absolute w-custom-width-18 h-custom-height-18 -bottom-2 -right-2 flex justify-center items-center bg-white lg:w-5 lg:h-5 lg:-bottom-2.5 lg:-right-2.5  rounded-full text-center text-xs text-custom-dark-blue lg:text-sm overflow-hidden">99</div>
-                                </Link>
+                                <Cart />
                                 {user ? (
                                     <>
                                         <Link href="/account" className="w-6 lg:w-7 text-white cursor-pointer">
@@ -141,7 +139,7 @@ export default function Navbar() {
             </div>
 
             {/* Divider */}
-            <div className="hidden lg:block h-custom-height-1 bg-slate-600" />
+            <div className="hidden lg:block h-px bg-slate-600" />
 
             {/* Navbar DESKTOP, MOBILE and Search MOBILE functionality */}
             <div className="bg-custom-deep-blue">
