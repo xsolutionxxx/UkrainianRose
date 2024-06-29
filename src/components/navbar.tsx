@@ -55,7 +55,7 @@ export default function Navbar() {
 
     return (
         <nav className="relative">
-            <div className={`${searchOpen || navOpen ? 'hidden lg:block' : ''}`}>
+            <div className={`bg-white ${searchOpen || navOpen ? 'hidden lg:block' : ''}`}>
                 <MaxWidthWrapper className="py-1.5 flex justify-center items-center text-center font-regular text-xs text-custom-dark-blue md:text-sm lg:text-base overflow-x-hidden whitespace-nowrap">
                     <div className="inline-block">
                         {phrases[currentPhraseIndex]}
@@ -110,7 +110,7 @@ export default function Navbar() {
 
                             {/* Whishlist, cart, account */}
                             <div className="flex gap-4 md:gap-6 lg:gap-8">
-                                <Link href="/wishlist" className="w-6 text-white cursor-pointer lg:w-7">
+                                <Link href="/account/wishlist" className="w-6 text-white cursor-pointer lg:w-7">
                                     <Heart strokeWidth={1.25} className="full-size" />
                                 </Link>
                                 <Cart />
@@ -127,7 +127,7 @@ export default function Navbar() {
                                     </>
                                 ) : (
                                     <>
-                                        <Link href="/api/auth/login" className="w-6 lg:w-7 text-white cursor-pointer">
+                                        <Link href="/registration" className="w-6 lg:w-7 text-white cursor-pointer">
                                             <UserRound strokeWidth={1.25} className="full-size" />
                                         </Link>
                                     </>

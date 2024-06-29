@@ -29,6 +29,9 @@ const config = {
       colors: {
         'custom-deep-blue': '#011222',
         'custom-dark-blue': '#020D19',
+        'scrollbar-bg': '#fff', // фон повзунка
+        'scrollbar-thumb': '#011222', // повзунок
+        'scrollbar-thumb-hover': '#f56565', // повзунок при наведенні
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

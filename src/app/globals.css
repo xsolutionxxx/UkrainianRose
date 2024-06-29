@@ -90,3 +90,10 @@
   		}
   	}
   }
+
+  @layer utilities {
+  	.custom-scrollbar {
+  		scrollbar-width: thin;
+  		scrollbar-color: theme('colors.scrollbar-thumb') theme('colors.scrollbar-bg');
+	}
+  }
